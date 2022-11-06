@@ -3,6 +3,8 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useTheme } from "..";
 
+/** A button component to display raw data that is shown on the page
+*/
 export const RawRenderer = ({ rawData, parentColor }) => {
   const theme = useTheme();
   const buttonColorClasses = {
@@ -30,17 +32,15 @@ export const RawRenderer = ({ rawData, parentColor }) => {
       <button
         type="button"
         onClick={openModal}
-        className={`z-10 relative flex items-center px-5 py-2 mx-3 my-2 font-semibold shadow-sm text-sm transition duration-150 ease-out rounded transform focus:shadow-outline focus:outline-none whitespace-nowrap opacity-80 hover:opacity-100 shadow-md ${
-          buttonColorClasses[theme.color]
-        }`}
+        className={`z-10 relative flex items-center px-5 py-2 mx-3 my-2 font-semibold shadow-sm text-sm transition duration-150 ease-out rounded transform focus:shadow-outline focus:outline-none whitespace-nowrap opacity-80 hover:opacity-100 shadow-md ${buttonColorClasses[theme.color]
+          }`}
       >
         View Raw Data
         <span
-          className={`absolute w-full h-full left-0 top-0 rounded -z-1 ${
-            parentColor === "primary"
-              ? `bg-white opacity-80`
-              : `bg-current opacity-15`
-          }`}
+          className={`absolute w-full h-full left-0 top-0 rounded -z-1 ${parentColor === "primary"
+            ? `bg-white opacity-80`
+            : `bg-current opacity-15`
+            }`}
         ></span>
       </button>
       <Transition appear show={isOpen} as={Fragment}>

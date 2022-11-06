@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { Container } from "../../util/container";
-import { RawRenderer } from "./rawRenderer";
 import { useTheme } from "..";
 import { Icon } from "../../util/icon";
 
@@ -67,11 +66,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaFacebookF
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
+                  ]
+                    }`}
                 />
               </a>
             )}
@@ -82,11 +80,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaTwitter
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
+                  ]
+                    }`}
                 />
               </a>
             )}
@@ -97,11 +94,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <AiFillInstagram
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
+                  ]
+                    }`}
                 />
               </a>
             )}
@@ -112,21 +108,18 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaGithub
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
+                  ]
+                    }`}
                 />
               </a>
             )}
           </div>
-          <RawRenderer parentColor={data.color} rawData={rawData} />
         </div>
         <div
-          className={`absolute h-1 bg-gradient-to-r from-transparent ${
-            data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent top-0 left-4 right-4 opacity-5`}
+          className={`absolute h-1 bg-gradient-to-r from-transparent ${data.color === "primary" ? `via-white` : `via-black dark:via-white`
+            } to-transparent top-0 left-4 right-4 opacity-5`}
         ></div>
       </Container>
     </footer>

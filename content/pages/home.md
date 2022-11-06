@@ -1,19 +1,15 @@
 ---
-title: "Tina Cloud Starter"
+title: Home page
 blocks:
-  - headline: Welcome to the Tina Starter
-    text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      content/pages/home.md, components from components/blocks, and puts them
-      all together in pages/\[filename].tsx, all based on a schema defined in
-      .tina/schema.ts.
+  - headline: Gear 1
+    text: |
+      We are doing FRC and FTC, yay!
     actions:
-      - label: Get Started
+      - label: Read our Blog
         type: button
         icon: true
         link: /posts
-      - label: Read Blog
+      - label: Donate Money
         type: link
         icon: false
         link: /posts
@@ -48,3 +44,4 @@ blocks:
     color: tint
     _template: features
 ---
+
